@@ -1,0 +1,19 @@
+/*!
+ * MindPlus
+ * uno
+ *
+ */
+
+// 动态变量
+volatile float mind_n_HumanData;
+
+
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	mind_n_HumanData = digitalRead(13);
+	Serial.println(mind_n_HumanData);//高电平表示有人到来
+	delay(1000);
+}

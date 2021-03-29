@@ -1,0 +1,28 @@
+/*!
+ * MindPlus
+ * uno
+ *
+ */
+
+// 动态变量
+volatile float mind_n_Data1;
+volatile float mind_n_Data2;
+volatile float mind_n_Data3;
+
+
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	mind_n_Data1 = digitalRead(A0);//数字信号，遇到黑色返回0，遇到白色返回1，距离超过3cm，返回0
+	mind_n_Data2 = digitalRead(A1);
+	mind_n_Data3 = digitalRead(A2);
+	Serial.print("A0 is ");
+	Serial.println(mind_n_Data1);
+	Serial.print("A1 is ");
+	Serial.println(mind_n_Data2);
+	Serial.print("A2 is ");
+	Serial.println(mind_n_Data3);
+	delay(1000);
+}

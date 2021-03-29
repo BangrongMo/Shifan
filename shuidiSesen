@@ -1,0 +1,18 @@
+volatile float mind_n_Data1;
+volatile float mind_n_Data2;
+volatile float mind_n_Data3;
+
+
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	mind_n_Data1 = analogRead(A0);
+
+	Serial.print("A0 is ");
+	Serial.println(mind_n_Data1);
+
+
+	delay(1000);
+}

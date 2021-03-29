@@ -7,6 +7,6 @@ void loop() {
 	if ((Serial.available())) {
 		mind_n_Data = Serial.parseInt();
 	}
-	digitalWrite(A0,mind_n_Data);//数字传感器
+	digitalWrite(A0,mind_n_Data);//数字传感器，写入1为震动
 	delay(1000);
 }

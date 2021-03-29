@@ -1,0 +1,12 @@
+int mind_n_Data;
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	if ((Serial.available())) {
+		mind_n_Data = Serial.parseInt();
+	}
+	digitalWrite(A0,mind_n_Data);//数字传感器
+	delay(1000);
+}

@@ -1,0 +1,11 @@
+
+int mind_n_Data;
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	mind_n_Data = digitalRead(A0);
+	Serial.println(mind_n_Data);//按下按钮显示0，不按显示1
+	delay(1000);}
+	}

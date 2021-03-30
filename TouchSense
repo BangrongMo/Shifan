@@ -1,0 +1,19 @@
+/*!
+ * MindPlus
+ * uno
+ *
+ */
+
+// 动态变量
+volatile float mind_n_data;
+
+
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+}
+void loop() {
+	mind_n_data = analogRead(A0);//数字信号，有人按为1023，无人按为0
+	Serial.println(mind_n_data);
+	delay(1000);
+}

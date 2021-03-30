@@ -1,0 +1,17 @@
+// 动态变量
+volatile float mind_n_data;
+
+
+// 主程序开始
+void setup() {
+	Serial.begin(9600);
+	mind_n_data=60;
+}
+void loop() {
+	if ((Serial.available())) {
+		mind_n_data = Serial.parseInt();//200以上，LED模块点亮
+		analogWrite(A0, mind_n_data);
+		Serial.print("LED is");
+		Serial.println(mind_n_data);
+	}
+}

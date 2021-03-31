@@ -1,0 +1,20 @@
+/*!
+ * MindPlus
+ * uno
+ *
+ */
+#include <DFRobot_NeoPixel.h>
+// 创建对象
+DFRobot_NeoPixel neoPixel_4;
+
+
+// 主程序开始
+void setup() {
+	neoPixel_4.begin(4, 3);//设置灯条在4号引脚上，灯条上3个灯
+	neoPixel_4.showRainbow(0, 3, 1, 360);
+}
+void loop() {
+	delay(1000);
+	neoPixel_4.rotate(1);//循环位移灯泡状态（最后一个代替前一个）
+  //neoPixel_4.shift(0);亮度移动
+}
